@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEON ESCAPE 3D</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game-shell">
+    <div id="game"></div>
+
+    <header class="hud">
+      <div class="brand">NEON <span>ESCAPE</span></div>
+      <div class="stats">
+        <div>SCORE<strong id="score">0</strong></div>
+        <div>DISTANCE<strong id="distance">0 m</strong></div>
+        <div>ENERGY<strong id="energy">0</strong></div>
+      </div>
+    </header>
+
+    <section id="start-screen" class="overlay">
+      <p class="eyebrow">WELCOME TO THE FUTURE</p>
+      <h1>NEON<br><span>ESCAPE</span></h1>
+      <p>RUN THE CITY. BREAK THE SYSTEM.</p>
+      <button id="start-button">START RUN ▶</button>
+      <small>ARROWS TO MOVE · UP TO JUMP · DOWN TO SLIDE</small>
+      <p id="loading">Loading 3D character...</p>
+    </section>
+
+    <section id="game-over" class="overlay hidden">
+      <h2>RUN <span>OVER</span></h2>
+      <p id="final-score">SCORE: 0</p>
+      <button id="restart-button">PLAY AGAIN ↻</button>
+    </section>
+
+    <div class="mobile-controls">
+      <button data-action="left">◀</button>
+      <button data-action="jump">▲</button>
+      <button data-action="slide">▼</button>
+      <button data-action="right">▶</button>
+    </div>
+  </main>
+
+  <script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+  }
+}
+</script>
+
+<script type="module" src="game.js"></script>
+</body>
+</html>
